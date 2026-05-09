@@ -1,12 +1,30 @@
-# Assignment 1
+# Brake Kit Manager Module
 
-You will only need one file, ie, your node module, for this assignment.
+A Node.js module that simulates a backend inventory management system for a high-performance brake kit catalog.
 
-In this readme file, describe how to use your node module. It could be similar to **app.js** from Lab2, where you call some functions in your node module and display the output. Describe how to setup your node module, if any. Describe how to call the functions, what parameters required and so on.
+## Setup & Usage
 
-You can press **Ctrl+Shift+V** in this file in Visual Studio Code to see a live preview of the readme file.
+To use this module, require the file in your application:
 
-For some tips in formatting text in readme file, refer to https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
+```javascript
+const brakeManager = require('./xiuchen_BrakeKitManager.js');
 
-# References
-Provide the references that you have used to support your assignment. 
+// Example usage:
+const bremboKits = brakeManager.findKitsByBrand("Brembo");
+console.log(bremboKits);
+```
+
+## Functions
+
+1. **`addNewKit(id, brand, series, config, rotor, price, stock)`**: Adds a new brake kit to the inventory.
+2. **`findKitsByBrand(brandName)`**: Returns an array of kits matching the specified brand.
+3. **`updateInventory(id, quantityChange)`**: Adjusts the stock level of a kit (use negative numbers for sales).
+4. **`searchBySeries(keyword)`**: Finds brake kits containing the specific series keyword.
+5. **`calculateTotal(id, quantity, discountCode)`**: Calculates final price. Accepts `"THEBRAKESHOP10"` (10% off) or `"THEBRAKESHOP20"` (20% off) as discount codes.
+6. **`getLowStockAlert(threshold)`**: Returns kits where the stock is below the threshold.
+
+## References
+* **Web Application:** [The Brake Shop SG](https://www.thebrakeshop.com.sg/)
+
+## AI Usage Declaration
+I used AI to assist with generating ideas for the functions, the mock data array, and structuring the mock schema for the brake kits, as permitted by the assignment guidelines. I manually modified and implemented the code.
