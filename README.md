@@ -27,4 +27,4 @@ console.log(bremboKits);
 * **Web Application:** [The Brake Shop SG](https://www.thebrakeshop.com.sg/)
 
 ## AI Usage Declaration
-I used AI to assist with generating ideas for the functions, the mock data array, and structuring the mock schema for the brake kits, as permitted by the assignment guidelines. I manually modified and implemented the code.
+I used AI to help brainstorm the function ideas and structure the initial mock data array.  I manually implemented and tweaked the final code
