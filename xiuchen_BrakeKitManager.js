@@ -1,3 +1,8 @@
+/**
+ * References:
+ * Web Application: The Brake Shop SG (https://www.thebrakeshop.com.sg/)
+ */
+
 let inventory = [
   { id: 1, brand: "AP Racing", series: "CP9040", configuration: "4-Pot", rotorType: "2-piece slotted", price: 2800, stock: 5 },
   { id: 2, brand: "Brembo", series: "GT Systems", configuration: "6-Pot", rotorType: "Drilled", price: 4200, stock: 2 }
