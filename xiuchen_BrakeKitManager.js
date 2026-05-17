@@ -10,6 +10,9 @@ let inventory = [
 
 // 1. Adds a new brake kit object to the inventory array.
 function addNewKit(id, brand, series, config, rotor, price, stock) {
+  // If stock is less than 0, set it to 0.
+  const validatedStock = stock < 0 ? 0 : stock;
+
   const newKit = {
     id: id,
     brand: brand,
@@ -17,8 +20,9 @@ function addNewKit(id, brand, series, config, rotor, price, stock) {
     configuration: config,
     rotorType: rotor,
     price: price,
-    stock: stock
+    stock: validatedStock 
   };
+
   inventory.push(newKit);
   return newKit;
 }
